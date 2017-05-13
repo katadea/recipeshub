@@ -1,0 +1,102 @@
+<!--
+
+	Recipes Hub Application
+	Vue.js, jQuery 3.1.1, Bootstrap v4
+	Kathryn Adea
+	5/13/2017
+
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+	
+		<meta charset="utf-8">
+		<title>Recipes Hub</title>
+		
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!-- Custom Styles -->
+		<link rel="stylesheet" href="css/styles.css">
+		
+	</head>
+	
+	<body>
+		<!-- Navbar content -->
+		<nav class="navbar navbar-default">
+   			<a class="navbar-brand" href="#">Recipes Hub</a>
+   			<ul class="nav navbar-nav">
+        		<li><a href="#" data-toggle="modal" title="Help" data-target="#helpModal">Help</a></li>
+        	</ul>
+        <!-- Help Modal -->
+        	<div id="helpModal" class="modal fade" role="dialog">
+  				<div class="modal-dialog">
+    				<div class="modal-content">
+	      				<div class="modal-header">
+	        				<h4 class="modal-title">Help</h4>
+	      				</div>
+	      				<div class="modal-body">
+	        				<p>Click a recipe name on the left column to display its recipe card. You can read details about ingredients on Wikipedia by clicking their names.</p>
+	     				</div>
+	      				<div class="modal-footer">
+	        				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      				</div>
+    				</div>
+
+  				</div>
+			</div>
+  		</nav>
+  		
+  		<!-- Main Content -->
+		<div id="app" class="container container-fluid">
+		
+		<!-- Left Column Content -->
+			<div id="leftCol" class="col-sm-3 list-group">
+				<!-- <a class="list-group-item list-group-item-action disabled">Recipe Book</a> -->
+				<a v-for="recipe in recipes" class="recipe-item list-group-item list-group-item-action" href="#" >
+					{{ recipe.name }}
+				</a>
+			</div>
+		<!-- Left Column Content End -->
+		<!-- Right Column Content -->
+			<div id="rightCol" class="col-sm-9">
+				<div v-for="recipe in recipes" :id="recipe.name" class="panel panel-default" style="display: none">
+					<div class="panel-heading">{{ recipe.name }}</div>
+					<div class="panel-body">
+					Ingredients:
+						<ul>
+							<li v-for="ingredient in recipe.Ingredients">
+								{{ingredient.amount}}
+								<a :href="getValue(ingredient.name, IngredientsDetails)" target="_blank">
+									{{ingredient.name}}
+								</a>
+							</li>
+						</ul>
+						Instructions:
+						<ul v-for="step in recipe.steps">
+							<li>{{ step }}</li>
+						</ul>
+					 </div>
+					 <div class="panel-footer">
+					 	Similar Recipes: <br>
+					 	<span v-for="cuisine in recipe.SimilarCuisines">
+					 		<a href="#" class="cuisineLink">{{ cuisine }} <br></a>	
+					 	</span>
+					 </div>
+				</div>	
+			</div>
+			<!-- Right Column Content End -->
+		</div>
+		<!-- Main Content End-->
+	</body>
+</html>
+	
+<!-- Scripts -->
+
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/tether.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript" src="js/vue-resource.js"></script>
+
+<script language="javascript" type="text/javascript" src="js/index.js"></script>

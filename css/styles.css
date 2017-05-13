@@ -1,0 +1,53 @@
+@-webkit-keyframes fadeIn {    
+    0% { opacity:0; }
+    100% { opacity:1; }
+}
+
+@-moz-keyframes fadeIn {    
+    0% { opacity:0; }
+    100% { opacity:1; }
+}
+
+@-o-keyframes fadeIn {    
+    0% { opacity:0; }
+    100% { opacity:1; }
+}
+
+@keyframes fadeIn {    
+    0% { opacity:0; }
+    100% { opacity:1; }
+}
+
+
+body {
+	background: white;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.navbar-default {
+	background-color:#456022 !important;
+}
+
+.navbar-brand, .nav a {
+	color: #ffffff !important;
+}
+
+.navbar-brand:hover, .nav a:hover {
+	background-color:#668d32 !important;
+}
+
+.panel-heading {
+	background-color:#4f6c26 !important;
+	color: #ffffff !important;
+}
+
+#rightCol .panel  {
+	-webkit-animation: fadeIn 0.5s linear 1 !important; /* Safari & Chrome */
+    -moz-animation: fadeIn 0.5s linear 1 !important; /* Firefox */
+    -o-animation: fadeIn 0.5s linear 1 !important;  /* Opera */
+    animation: fadeIn 0.5s linear 1 !important;
+    
+}
