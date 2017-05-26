@@ -51,3 +51,6 @@ ul {
     animation: fadeIn 0.5s linear 1 !important;
     
 }
+#accordion  {
+	width: 70%;
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="C:\Web\recipes\Recipes Hub.clpprj">
+	<settings><PM_URL><![CDATA[http://localhost/recipes/]]></PM_URL><PM_HOME_URL><![CDATA[http://localhost/recipes/]]></PM_HOME_URL><PM_LIBS><![CDATA[]]></PM_LIBS><PM_FTP_CONNECTION><![CDATA[]]></PM_FTP_CONNECTION><PM_FTP_DIR><![CDATA[]]></PM_FTP_DIR><PM_FTP_UPLOAD_ON_SAVE><![CDATA[INT:0]]></PM_FTP_UPLOAD_ON_SAVE></settings><removed value=";C:\Web\recipes\index1.html;C:\Web\recipes\js\bootstrap.js;C:\Web\recipes\js\jquery-3.1.1.js;"/><added value=""/><lastopfiles>
+		<file name="C:\Web\recipes\js\vue.js"/>
+		<file name="C:\Web\recipes\index.html"/>
+		<file name="C:\Web\recipes\css\styles.css"/>
+		<file name="C:\Web\recipes\js\index.js"/>
+	</lastopfiles>
+	<todoblock>
+		<todofile name="C:\Web\recipes\js\bootstrap.js">
+			<todo name="todo (fat): these should probably be refactored out of modal.js" pos="5;1962"/>
+			<todo name="todo (fat): remove sketch reliance on jQuery position/offset" pos="11;2226"/>
+			<todo name="todo (fat) this is kinda sus..." pos="9;2329"/>
+		</todofile>
+		<todofile name="C:\Web\recipes\js\jquery-3.1.1.js">
+			<todo name="TODO: identify versions" pos="8;797"/>
+			<todo name="TODO: identify versions" pos="7;811"/>
+			<todo name="TODO: Now that all calls to _data and _removeData have been replaced" pos="2;4253"/>
+		</todofile>
+	</todoblock>
+	<filescache>
+		<file name="C:\Web\recipes\js\vue.js" crc="1483476439"/>
+		<file name="C:\Web\recipes\js\vue-resource.js" crc="1494579655"/>
+		<file name="C:\Web\recipes\js\jquery-3.1.1.min.js" crc="1475045448"/>
+		<file name="C:\Web\recipes\js\index.js" crc="1494672101"/>
+		<file name="C:\Web\recipes\js\bootstrap.min.js" crc="1477317028"/>
+		<file name="C:\Web\recipes\css\styles.css" crc="1494672050"/>
+		<file name="C:\Web\recipes\css\bootstrap.css" crc="1477317028"/>
+		<file name="C:\Web\recipes\index.html" crc="1494672076"/>
+	</filescache>
+</project>

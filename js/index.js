@@ -10,7 +10,8 @@ var app = new Vue({
   data: {
     recipes: [],
     IngredientsDetails: {},
-    error: false
+    error: false,
+    panelCount: 1
     },
 
   /* created: function () {
@@ -32,7 +33,16 @@ var app = new Vue({
    methods: {
    	getValue: function (key, object) {
    		return object[key];
+   		
    	}
+   	
+   	/* getPanelCount: function () {
+		return this.$data.panelCount; 
+	},
+   	
+   	increasePanelCount: function () {
+		this.panelCount += 1;
+	}*/
    } 
   
 }); 

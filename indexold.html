@@ -48,53 +48,47 @@
   		</nav>
   		
   		<!-- Main Content -->
-		<div id="app" class="container  ">
+		<div id="app" class="container container-fluid">
 		
+	<!--- Vertical Layout
 		
-			
-			<!-- Accordion Style -->
-			
-			
-
-<div id="accordion-wrapper">
-	<div id="accordion" class="panel-group center-block">
-	  <div v-for="(recipe, index) in recipes" :id="recipe.name" class="panel panel-default">
-	    <div class="panel-heading" :id="'heading'+index" aria-expanded="false">
-	      <h5 class="panel-title">
-	        <a data-toggle="collapse" data-parent="#accordion" :href="'#collapse'+index">
-	          {{ recipe.name }}
-	        </a>
-	      </h5>
-	    </div>
-
-	    <div :id="'collapse'+index" class="collapse">
-	      <div class="panel-body">
-	        Ingredients:
-							<ul>
-								<li v-for="ingredient in recipe.Ingredients">
-									{{ingredient.amount}}
-									<a :href="getValue(ingredient.name, IngredientsDetails)" target="_blank">
-										{{ingredient.name}}
-									</a>
-								</li>
-							</ul>
-							Instructions:
-							<ul v-for="step in recipe.steps">
-								<li>{{ step }}</li>
-							</ul>
-							Similar Recipes: <br>
-						 	<span v-for="cuisine in recipe.SimilarCuisines">
-						 		<a href="#" class="cuisineLink">{{ cuisine }} <br></a>	
-						 	</span>
-							
-	      </div>
-	      
-	  </div>
-	  </div>
-	</div>
-</div>
-			
-			<!-- Accordion Style End -->
+		<!-- Left Column Content -->
+			<div id="leftCol" class="col-sm-3 list-group">
+				<!-- <a class="list-group-item list-group-item-action disabled">Recipe Book</a> -->
+				<a v-for="recipe in recipes" class="recipe-item list-group-item list-group-item-action" href="#" >
+					{{ recipe.name }}
+				</a>
+			</div>
+		<!-- Left Column Content End -->
+		<!-- Right Column Content -->
+			<div id="rightCol" class="col-sm-9">
+				<div v-for="recipe in recipes" :id="recipe.name" class="panel panel-default" style="display: none">
+					<div class="panel-heading">{{ recipe.name }}</div>
+					<div class="panel-body">
+					Ingredients:
+						<ul>
+							<li v-for="ingredient in recipe.Ingredients">
+								{{ingredient.amount}}
+								<a :href="getValue(ingredient.name, IngredientsDetails)" target="_blank">
+									{{ingredient.name}}
+								</a>
+							</li>
+						</ul>
+						Instructions:
+						<ul v-for="step in recipe.steps">
+							<li>{{ step }}</li>
+						</ul>
+					 </div>
+					 <div class="panel-footer">
+					 	Similar Recipes: <br>
+					 	<span v-for="cuisine in recipe.SimilarCuisines">
+					 		<a href="#" class="cuisineLink">{{ cuisine }} <br></a>	
+					 	</span>
+					 </div>
+				</div>	
+			</div>
+			<!-- Right Column Content End -->
+		-->
 		</div>
 		<!-- Main Content End-->
 	</body>
